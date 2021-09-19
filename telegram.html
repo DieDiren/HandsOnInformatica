@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 Telegram | Hands on—Programming own Bots and Systems for Smart Homes and Gardens</title>
+  <meta name="description" content="8 Telegram | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 Telegram | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 Telegram | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  
+  
+  
+
+<meta name="author" content="Diren Senger" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercises-day-1.html"/>
+<link rel="next" href="exercises-day-2.html"/>
+<script src="book_assets/header-attrs-2.9/header-attrs.js"></script>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="teaser.html"><a href="teaser.html"><i class="fa fa-check"></i><b>1</b> Teaser</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html"><i class="fa fa-check"></i><b>3</b> Working with the Raspberry Pi</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#getting-started"><i class="fa fa-check"></i><b>3.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#the-operating-system"><i class="fa fa-check"></i><b>3.2</b> The operating system</a></li>
+<li class="chapter" data-level="3.3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#using-the-raspberry-pi-as-a-desktop-computer"><i class="fa fa-check"></i><b>3.3</b> Using the Raspberry Pi as a desktop computer</a></li>
+<li class="chapter" data-level="3.4" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#the-raspberry-pi-and-ssh"><i class="fa fa-check"></i><b>3.4</b> The Raspberry-Pi and SSH</a></li>
+<li class="chapter" data-level="3.5" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#establishing-a-wifi-connection"><i class="fa fa-check"></i><b>3.5</b> Establishing a Wifi connection</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-1-use-keyboard-mouse-and-monitor"><i class="fa fa-check"></i><b>3.5.1</b> Option 1: Use keyboard, mouse and monitor</a></li>
+<li class="chapter" data-level="3.5.2" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-2-ethernet-cable"><i class="fa fa-check"></i><b>3.5.2</b> Option 2: Ethernet Cable</a></li>
+<li class="chapter" data-level="3.5.3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-3-edit-a-config-file-on-the-sd-card"><i class="fa fa-check"></i><b>3.5.3</b> Option 3: Edit a config file on the SD-card</a></li>
+<li class="chapter" data-level="3.5.4" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-4-make-a-hotspot-with-your-mobile-phone"><i class="fa fa-check"></i><b>3.5.4</b> Option 4: Make a hotspot with your mobile phone</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html"><i class="fa fa-check"></i><b>4</b> Find the IP-address of your Raspberry Pi</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#if-you-connected-mouse-keyboard-and-monitor"><i class="fa fa-check"></i><b>4.1</b> If you connected mouse, keyboard and monitor</a></li>
+<li class="chapter" data-level="4.2" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#angryip-software"><i class="fa fa-check"></i><b>4.2</b> Angryip software</a></li>
+<li class="chapter" data-level="4.3" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#command-line"><i class="fa fa-check"></i><b>4.3</b> Command line</a></li>
+<li class="chapter" data-level="4.4" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#using-your-routers-administration-page"><i class="fa fa-check"></i><b>4.4</b> Using your router’s administration page</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html"><i class="fa fa-check"></i><b>5</b> Using SSH and the command line</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#the-basics"><i class="fa fa-check"></i><b>5.1</b> The basics</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#finding-your-ip"><i class="fa fa-check"></i><b>5.1.1</b> Finding your IP</a></li>
+<li class="chapter" data-level="5.1.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#connect"><i class="fa fa-check"></i><b>5.1.2</b> Connect!</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#if-some-thing-is-not-working---installing-and-enabling-ssh"><i class="fa fa-check"></i><b>5.2</b> If some thing is not working - Installing and Enabling SSH</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#installation-on-linux"><i class="fa fa-check"></i><b>5.2.1</b> Installation on Linux</a></li>
+<li class="chapter" data-level="5.2.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#on-windows"><i class="fa fa-check"></i><b>5.2.2</b> On Windows</a></li>
+<li class="chapter" data-level="5.2.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#on-mac"><i class="fa fa-check"></i><b>5.2.3</b> On Mac</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#using-the-command-line"><i class="fa fa-check"></i><b>5.3</b> Using the command line</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#list-files"><i class="fa fa-check"></i><b>5.3.1</b> List files</a></li>
+<li class="chapter" data-level="5.3.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#change-the-current-directory"><i class="fa fa-check"></i><b>5.3.2</b> Change the current directory</a></li>
+<li class="chapter" data-level="5.3.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#show-file"><i class="fa fa-check"></i><b>5.3.3</b> show file</a></li>
+<li class="chapter" data-level="5.3.4" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#edit-file"><i class="fa fa-check"></i><b>5.3.4</b> edit file</a></li>
+<li class="chapter" data-level="5.3.5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#run-a-python-script"><i class="fa fa-check"></i><b>5.3.5</b> run a python script</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#copying-a-file"><i class="fa fa-check"></i><b>5.4</b> copying a file</a></li>
+<li class="chapter" data-level="5.5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#copying-single-files-using-ssh"><i class="fa fa-check"></i><b>5.5</b> Copying single files using ssh</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#synchronising-directories-using-scp"><i class="fa fa-check"></i><b>5.5.1</b> Synchronising directories using scp</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hardware.html"><a href="hardware.html"><i class="fa fa-check"></i><b>6</b> Hardware</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hardware.html"><a href="hardware.html#pinout"><i class="fa fa-check"></i><b>6.1</b> Pinout</a></li>
+<li class="chapter" data-level="6.2" data-path="hardware.html"><a href="hardware.html#cables"><i class="fa fa-check"></i><b>6.2</b> Cables</a></li>
+<li class="chapter" data-level="6.3" data-path="hardware.html"><a href="hardware.html#resistors"><i class="fa fa-check"></i><b>6.3</b> Resistors</a></li>
+<li class="chapter" data-level="6.4" data-path="hardware.html"><a href="hardware.html#relay"><i class="fa fa-check"></i><b>6.4</b> Relay</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="exercises-day-1.html"><a href="exercises-day-1.html"><i class="fa fa-check"></i><b>7</b> Exercises Day 1</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="exercises-day-1.html"><a href="exercises-day-1.html#change-password"><i class="fa fa-check"></i><b>7.1</b> Change password</a></li>
+<li class="chapter" data-level="7.2" data-path="exercises-day-1.html"><a href="exercises-day-1.html#reboot"><i class="fa fa-check"></i><b>7.2</b> Reboot</a></li>
+<li class="chapter" data-level="7.3" data-path="exercises-day-1.html"><a href="exercises-day-1.html#list-files-1"><i class="fa fa-check"></i><b>7.3</b> List files</a></li>
+<li class="chapter" data-level="7.4" data-path="exercises-day-1.html"><a href="exercises-day-1.html#make-a-readme-file-take-some-notes"><i class="fa fa-check"></i><b>7.4</b> make a Readme file/ take some notes</a></li>
+<li class="chapter" data-level="7.5" data-path="exercises-day-1.html"><a href="exercises-day-1.html#copy-a-file"><i class="fa fa-check"></i><b>7.5</b> copy a file</a></li>
+<li class="chapter" data-level="7.6" data-path="exercises-day-1.html"><a href="exercises-day-1.html#python---hello-world"><i class="fa fa-check"></i><b>7.6</b> Python - Hello World</a></li>
+<li class="chapter" data-level="7.7" data-path="exercises-day-1.html"><a href="exercises-day-1.html#bme280"><i class="fa fa-check"></i><b>7.7</b> BME280</a></li>
+<li class="chapter" data-level="7.8" data-path="exercises-day-1.html"><a href="exercises-day-1.html#your-own-project"><i class="fa fa-check"></i><b>7.8</b> Your own project</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="exercises-day-1.html"><a href="exercises-day-1.html#ideas"><i class="fa fa-check"></i><b>7.8.1</b> Ideas</a></li>
+<li class="chapter" data-level="7.8.2" data-path="exercises-day-1.html"><a href="exercises-day-1.html#collect-the-material-you-need"><i class="fa fa-check"></i><b>7.8.2</b> Collect the material you need</a></li>
+<li class="chapter" data-level="7.8.3" data-path="exercises-day-1.html"><a href="exercises-day-1.html#make-a-plan"><i class="fa fa-check"></i><b>7.8.3</b> Make a plan</a></li>
+<li class="chapter" data-level="7.8.4" data-path="exercises-day-1.html"><a href="exercises-day-1.html#connect-and-test"><i class="fa fa-check"></i><b>7.8.4</b> Connect and test</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="telegram.html"><a href="telegram.html"><i class="fa fa-check"></i><b>8</b> Telegram</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="telegram.html"><a href="telegram.html#security"><i class="fa fa-check"></i><b>8.1</b> Security</a></li>
+<li class="chapter" data-level="8.2" data-path="telegram.html"><a href="telegram.html#security-tipps"><i class="fa fa-check"></i><b>8.2</b> Security tipps</a></li>
+<li class="chapter" data-level="8.3" data-path="telegram.html"><a href="telegram.html#creating-a-telegram-bot"><i class="fa fa-check"></i><b>8.3</b> Creating a telegram bot</a></li>
+<li class="chapter" data-level="8.4" data-path="telegram.html"><a href="telegram.html#adding-a-command"><i class="fa fa-check"></i><b>8.4</b> Adding a command</a></li>
+<li class="chapter" data-level="8.5" data-path="telegram.html"><a href="telegram.html#reading-and-responding-to-messages"><i class="fa fa-check"></i><b>8.5</b> Reading and responding to messages</a></li>
+<li class="chapter" data-level="8.6" data-path="telegram.html"><a href="telegram.html#using-the-job-queue"><i class="fa fa-check"></i><b>8.6</b> Using the job queue</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="telegram.html"><a href="telegram.html#job-queue-example"><i class="fa fa-check"></i><b>8.6.1</b> job queue example</a></li>
+<li class="chapter" data-level="8.6.2" data-path="telegram.html"><a href="telegram.html#job-queue-functions"><i class="fa fa-check"></i><b>8.6.2</b> job queue functions</a></li>
+<li class="chapter" data-level="8.6.3" data-path="telegram.html"><a href="telegram.html#daily-example"><i class="fa fa-check"></i><b>8.6.3</b> daily example</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="telegram.html"><a href="telegram.html#simple-conversation"><i class="fa fa-check"></i><b>8.7</b> Simple conversation</a></li>
+<li class="chapter" data-level="8.8" data-path="telegram.html"><a href="telegram.html#inline-bots"><i class="fa fa-check"></i><b>8.8</b> Inline Bots</a></li>
+<li class="chapter" data-level="8.9" data-path="telegram.html"><a href="telegram.html#more-resources"><i class="fa fa-check"></i><b>8.9</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="exercises-day-2.html"><a href="exercises-day-2.html"><i class="fa fa-check"></i><b>9</b> Exercises Day 2</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="exercises-day-2.html"><a href="exercises-day-2.html#your-first-bot"><i class="fa fa-check"></i><b>9.1</b> Your first bot</a></li>
+<li class="chapter" data-level="9.2" data-path="exercises-day-2.html"><a href="exercises-day-2.html#sense"><i class="fa fa-check"></i><b>9.2</b> /sense</a></li>
+<li class="chapter" data-level="9.3" data-path="exercises-day-2.html"><a href="exercises-day-2.html#add-your-own-command"><i class="fa fa-check"></i><b>9.3</b> add your own command</a></li>
+<li class="chapter" data-level="9.4" data-path="exercises-day-2.html"><a href="exercises-day-2.html#embed-your-own-hardware"><i class="fa fa-check"></i><b>9.4</b> embed your own hardware</a></li>
+<li class="chapter" data-level="9.5" data-path="exercises-day-2.html"><a href="exercises-day-2.html#implement-your-own-timer"><i class="fa fa-check"></i><b>9.5</b> Implement your own timer</a></li>
+<li class="chapter" data-level="9.6" data-path="exercises-day-2.html"><a href="exercises-day-2.html#implement-your-own-conversation"><i class="fa fa-check"></i><b>9.6</b> Implement your own conversation</a></li>
+<li class="chapter" data-level="9.7" data-path="exercises-day-2.html"><a href="exercises-day-2.html#check-out-other-examples"><i class="fa fa-check"></i><b>9.7</b> Check out other examples</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="raspap.html"><a href="raspap.html"><i class="fa fa-check"></i><b>10</b> RaspAP</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="raspap.html"><a href="raspap.html#enable-access-point"><i class="fa fa-check"></i><b>10.1</b> Enable access point</a></li>
+<li class="chapter" data-level="10.2" data-path="raspap.html"><a href="raspap.html#disable-access-point"><i class="fa fa-check"></i><b>10.2</b> Disable access point:</a></li>
+<li class="chapter" data-level="10.3" data-path="raspap.html"><a href="raspap.html#how-to-see-which-services-are-running"><i class="fa fa-check"></i><b>10.3</b> How to see which services are running</a></li>
+<li class="chapter" data-level="10.4" data-path="raspap.html"><a href="raspap.html#login"><i class="fa fa-check"></i><b>10.4</b> Login</a></li>
+<li class="chapter" data-level="10.5" data-path="raspap.html"><a href="raspap.html#access-point-administration-page"><i class="fa fa-check"></i><b>10.5</b> Access Point administration page</a></li>
+<li class="chapter" data-level="10.6" data-path="raspap.html"><a href="raspap.html#using-the-access-point-and-ssh"><i class="fa fa-check"></i><b>10.6</b> Using the access point and ssh</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="grafana.html"><a href="grafana.html"><i class="fa fa-check"></i><b>11</b> Grafana</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="grafana.html"><a href="grafana.html#the-setup"><i class="fa fa-check"></i><b>11.1</b> The setup</a></li>
+<li class="chapter" data-level="11.2" data-path="grafana.html"><a href="grafana.html#collect-some-data"><i class="fa fa-check"></i><b>11.2</b> Collect some data</a></li>
+<li class="chapter" data-level="11.3" data-path="grafana.html"><a href="grafana.html#use-grafana"><i class="fa fa-check"></i><b>11.3</b> Use grafana</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="exercises-day-3.html"><a href="exercises-day-3.html"><i class="fa fa-check"></i><b>12</b> Exercises Day 3</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="exercises-day-3.html"><a href="exercises-day-3.html#add-more-panel-for-bme280"><i class="fa fa-check"></i><b>12.1</b> Add more panel for BME280</a></li>
+<li class="chapter" data-level="12.2" data-path="exercises-day-3.html"><a href="exercises-day-3.html#add-a-panel-for-your-own-data"><i class="fa fa-check"></i><b>12.2</b> Add a panel for your own data</a></li>
+<li class="chapter" data-level="12.3" data-path="exercises-day-3.html"><a href="exercises-day-3.html#here-are-some-other-ideas"><i class="fa fa-check"></i><b>12.3</b> Here are some other ideas</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="exercises-day-3.html"><a href="exercises-day-3.html#grafana-alerts-for-telegram"><i class="fa fa-check"></i><b>12.3.1</b> Grafana alerts for telegram</a></li>
+<li class="chapter" data-level="12.3.2" data-path="exercises-day-3.html"><a href="exercises-day-3.html#embed-a-grafana-plot-in-telegram"><i class="fa fa-check"></i><b>12.3.2</b> Embed a Grafana plot in telegram</a></li>
+<li class="chapter" data-level="12.3.3" data-path="exercises-day-3.html"><a href="exercises-day-3.html#telegram-and-influx"><i class="fa fa-check"></i><b>12.3.3</b> Telegram and Influx</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="exercises-day-3.html"><a href="exercises-day-3.html#work-on-your-own-project"><i class="fa fa-check"></i><b>12.4</b> Work on your own project :)</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html"><i class="fa fa-check"></i><b>13</b> More Raspberry Pi lifehacks</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#run-a-script-on-startup"><i class="fa fa-check"></i><b>13.1</b> Run a script on startup</a></li>
+<li class="chapter" data-level="13.2" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#install-an-image"><i class="fa fa-check"></i><b>13.2</b> Install an image</a></li>
+<li class="chapter" data-level="13.3" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#make-your-own-image"><i class="fa fa-check"></i><b>13.3</b> Make your own image</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#windows"><i class="fa fa-check"></i><b>13.3.1</b> Windows</a></li>
+<li class="chapter" data-level="13.3.2" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#mac"><i class="fa fa-check"></i><b>13.3.2</b> Mac</a></li>
+<li class="chapter" data-level="13.3.3" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#linux"><i class="fa fa-check"></i><b>13.3.3</b> Linux</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="exercises-day-4.html"><a href="exercises-day-4.html"><i class="fa fa-check"></i><b>14</b> Exercises Day 4</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="exercises-day-4.html"><a href="exercises-day-4.html#have-your-script-run-on-startup"><i class="fa fa-check"></i><b>14.1</b> Have your script run on startup</a></li>
+<li class="chapter" data-level="14.2" data-path="exercises-day-4.html"><a href="exercises-day-4.html#burn-your-image"><i class="fa fa-check"></i><b>14.2</b> Burn your image</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="image-sources.html"><a href="image-sources.html"><i class="fa fa-check"></i><b>15</b> Image Sources</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hands on—Programming own Bots and Systems for Smart Homes and Gardens</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="telegram" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Telegram</h1>
+<div id="security" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Security</h2>
+<p>A message can be send as plain text, or it can be encrypted in some way.
+If a message is encrypted on all its way from the sender to the recipient, this is called
+end-to-end encryption. If a message is encrypted on its way from the sender to a server, decripted, re-encrypted, and then transferred to the recipient, this is called encryption-in-transit or server-client-encryption.
+Telegram supports both encryption types.
+If you want to use end-to-end encryption, you have to go for secret chats. If you are interested in the details of Telegram’s symmetric end-to-end encryption you can read this: <a href="https://core.telegram.org/api/end-to-end">https://core.telegram.org/api/end-to-end</a>
+The default encryption scheme of telegram is server-client-encryption. This means, that messages cannot be read, e.g. by somebody having power over a wifi-router, but they could theoretically be read by telegram on the server side. However, Telegram states that it saves keys on servers at different locations, so that it is not possible for a single engineer to read any messages.
+Server-client-encryption allows for a cloud based system. In this way, you can read your messages on multiple devices, you do not need to worry about backups and everything run quite fast.</p>
+<p>Telegram uses a custom encryption scheme called MTProto. It has often been criticised for its custom design, as there has not been any formal proof that it is reliable and secure. However, in December 2020 a paper has been published giving some formal verification.
+Telegram offers up to 300 000 dollar for somebody finding some security issue. Every now and then, programmer or scientist discover some vulnerabilities, e.g. described in this article:<a href="https://mybroadband.co.za/news/security/406466-big-problems-with-telegram-security.html">https://mybroadband.co.za/news/security/406466-big-problems-with-telegram-security.html</a></p>
+<p>Most of Telegrams source code is open source, except the code running on Telegram’s server.</p>
+<p>Telegram can be a platform for illegal activities such as illegal pornography or stolen personal data, and it also has been used for communication by far-right-groups.</p>
+<p>It can also be a tool for political activism in dictatorial countries and has been blocked by several governments.</p>
+</div>
+<div id="security-tipps" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Security tipps</h2>
+<ul>
+<li>You can set an auto-delete timer for messages</li>
+<li>in some client apps, you can set a passphrase to avoid other people reading your messages when they got access to your device</li>
+<li>there is an option to hide your phone number: <a href="https://www.howtogeek.com/713715/how-to-hide-your-phone-number-in-telegram/">https://www.howtogeek.com/713715/how-to-hide-your-phone-number-in-telegram/</a></li>
+</ul>
+</div>
+<div id="creating-a-telegram-bot" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Creating a telegram bot</h2>
+<div class="figure">
+<img src="images/pythontelegrambot.png" alt="" />
+<p class="caption">python-telegram-bot</p>
+</div>
+<p>Bots are like normal Telegram accounts, but they are operated by programs.</p>
+<p>To create a new bot, you need to search for the botfather. I always found it strange, that the botfather is called botfather. Apparently, this because of the movie Godfather, a 1972 American crime film…</p>
+<p>Howevere, search for the botfather and click on start:</p>
+<div class="figure">
+<img src="images/startbotfather.png" alt="" />
+<p class="caption">chatting with the botfather</p>
+</div>
+<div class="figure">
+<img src="images/namebotfather.png" alt="" />
+<p class="caption">name your new bot</p>
+</div>
+<p>Then use the /newbot command. You can either press on the button with the “/”, or just type the command directly into the chat.
+Follow the instructions of the botfather. You will need to choose a name and a username for your bot.
+In the end, the botfather will send you an access token. Copy this token.</p>
+<p>Open the file bot.py</p>
+<p>You will need to insert your token here, in the Updater function:</p>
+<div class="figure">
+<img src="images/token.png" alt="" />
+<p class="caption">Insert your token</p>
+</div>
+<p>e.g. </p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="telegram.html#cb28-1" aria-hidden="true" tabindex="-1"></a>updater <span class="op">=</span> Updater(<span class="st">&#39;12414235252:gshgskghskjhwiuhfhskjfshvbjfhi&#39;</span>)</span></code></pre></div>
+<p>Run the script bot.py using</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="telegram.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> bot.py</span></code></pre></div>
+<p>Theoretically, your bot is online now! Search for your bot in telegram using its name or follow the link supplied by the botfather:</p>
+<div class="figure">
+<img src="images/link.png" alt="" />
+<p class="caption">Follow the link</p>
+</div>
+<p>You can try the commands /hi or /time.</p>
+<p>But… Per default, all bots are public. I assume you do not want to have a public bot (yet). So we limit it to certain chats. You need to manually add a chat-id before somebody can use your bot.</p>
+<p>So, type /hi. Your bot should not greet you back.</p>
+<p>But in the terminal window you use to run your bot, you should be able to see the chat-id of your private chat with the bot.</p>
+<div class="figure">
+<img src="images/findid.png" alt="" />
+<p class="caption">Find the ID</p>
+</div>
+<p>Copy this id and insert it in bot.py:</p>
+<p><img src="images/chatid.png" alt="Chat-ID" />
+You can delete 123 and insert your chat-id instead, you can also insert multiple chat-ids, seperated by comma.</p>
+<p>Re-run the script bot.py</p>
+<p>Now you can try to chat with the bot again using the commands /hi or /time. This time you should get an answer.</p>
+<!-- Dutch website Tweakers reported that an invited bot can potentially read all group messages when the bot controller changes the access settings silently at a later point in time. -->
+</div>
+<div id="adding-a-command" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Adding a command</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="telegram.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(update, context):</span>
+<span id="cb30-2"><a href="telegram.html#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># send a greeting</span></span>
+<span id="cb30-3"><a href="telegram.html#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> check_id(context, update):</span>
+<span id="cb30-4"><a href="telegram.html#cb30-4" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(<span class="st">&quot;Hi! I&#39;m the Informatica Feminale Bot.&quot;</span>)</span></code></pre></div>
+<p>A function that implements a command needs the update object (“update”) and the context (“bot”).
+We are using “check_id” to make our bot private, only answering in chats with certain chat-ids.
+“Reply_text” is one of many predefined functions from the telegram package. It will send the text in the chat.</p>
+<p>If you want that the user sees the command’s name and description when starting to type or using the “/”-button, you have to add it by chatting with the botfather:</p>
+<div class="figure">
+<img src="images/addcommand.png" alt="" />
+<p class="caption">add command</p>
+</div>
+</div>
+<div id="reading-and-responding-to-messages" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Reading and responding to messages</h2>
+<p>The bot can read and respond even to all “normal” messages sent in the chat. The message can be obtained using “update.message.text”:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="telegram.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> echo(update, context):</span>
+<span id="cb31-2"><a href="telegram.html#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Echo the user message.&quot;&quot;&quot;</span></span>
+<span id="cb31-3"><a href="telegram.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    update.message.reply_text(update.message.text)</span></code></pre></div>
+<p>In order to make the bot read the messages, you need to add a MessageHandler. You can filter the messages. In this case we are reading and responding to normal text-messages, but not to commands.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="telegram.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># on non command i.e message - echo the message on Telegram</span></span>
+<span id="cb32-2"><a href="telegram.html#cb32-2" aria-hidden="true" tabindex="-1"></a>    dp.add_handler(MessageHandler(Filters.text <span class="op">&amp;</span> <span class="op">~</span>Filters.command, echo))</span></code></pre></div>
+<div class="figure">
+<img src="images/echo.png" alt="" />
+<p class="caption">Echo</p>
+</div>
+</div>
+<div id="using-the-job-queue" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> Using the job queue</h2>
+<p>Your bot can perform a certain action and send a message after a certain amount of time, if you want repeatedly.</p>
+<p>You can use the following functions: run_daily / run_monthly, run_once and run_repeating.</p>
+<div id="job-queue-example" class="section level3" number="8.6.1">
+<h3><span class="header-section-number">8.6.1</span> job queue example</h3>
+<p>Let us look at an example first.
+Imagine you want to set a timer, e.g. to allow the user to time 10 seconds.</p>
+<div class="figure">
+<img src="images/timer.png" alt="" />
+<p class="caption">Timer</p>
+</div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="telegram.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> alarm_10(job_context):</span>
+<span id="cb33-2"><a href="telegram.html#cb33-2" aria-hidden="true" tabindex="-1"></a>    job_context.bot.send_message(chat_id<span class="op">=</span>job_context.job.context,</span>
+<span id="cb33-3"><a href="telegram.html#cb33-3" aria-hidden="true" tabindex="-1"></a>                             text<span class="op">=</span><span class="st">&#39;Drrrrrrring!!! 10 seconds passed.&#39;</span>)</span>
+<span id="cb33-4"><a href="telegram.html#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="telegram.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> set_alarm_10(update, context):</span>
+<span id="cb33-6"><a href="telegram.html#cb33-6" aria-hidden="true" tabindex="-1"></a>    chat_id <span class="op">=</span> update.message.chat_id</span>
+<span id="cb33-7"><a href="telegram.html#cb33-7" aria-hidden="true" tabindex="-1"></a>    job <span class="op">=</span> context.job_queue</span>
+<span id="cb33-8"><a href="telegram.html#cb33-8" aria-hidden="true" tabindex="-1"></a>    job.run_once(alarm_10, <span class="dv">10</span>, context<span class="op">=</span>chat_id, name<span class="op">=</span><span class="bu">str</span>(chat_id))</span></code></pre></div>
+<p>We have a function “set_alarm_10” which is basically like the other functions we add to the handler. The user can use a command to run this function. It shedules the job to induce an other function “alarm_10”, which is the actual alarm, after 10 seconds.</p>
+<p>Within this function we first obtain the chat_id of the chat where the command was used.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="telegram.html#cb34-1" aria-hidden="true" tabindex="-1"></a>chat_id <span class="op">=</span> update.message.chat_id</span></code></pre></div>
+<p>We then obtain our job queue:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="telegram.html#cb35-1" aria-hidden="true" tabindex="-1"></a>job <span class="op">=</span> context.job_queue</span></code></pre></div>
+<p>And then we use run_once:
+<em>alarm_10</em> is the name of the function we want to call.
+<em>10</em> means, we want to call it after 10 seconds.
+We also pass the chat_id as context, and its name.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="telegram.html#cb36-1" aria-hidden="true" tabindex="-1"></a>job.run_once(alarm_10, <span class="dv">10</span>, context<span class="op">=</span>chat_id, name<span class="op">=</span><span class="bu">str</span>(chat_id))</span></code></pre></div>
+<p>The message to be called has the job-queue as a parameter. Using this we can send a message:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="telegram.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> alarm_10(job_context):</span>
+<span id="cb37-2"><a href="telegram.html#cb37-2" aria-hidden="true" tabindex="-1"></a>    job_context.bot.send_message(chat_id<span class="op">=</span>job_context.job.context,</span>
+<span id="cb37-3"><a href="telegram.html#cb37-3" aria-hidden="true" tabindex="-1"></a>                             text<span class="op">=</span><span class="st">&#39;Drrrrrrring!!! 10 seconds passed.&#39;</span>)</span></code></pre></div>
+</div>
+<div id="job-queue-functions" class="section level3" number="8.6.2">
+<h3><span class="header-section-number">8.6.2</span> job queue functions</h3>
+<p>(copied from <a href="https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.jobqueue.html">https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.jobqueue.html</a>)</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="telegram.html#cb38-1" aria-hidden="true" tabindex="-1"></a>run_daily(callback, time, days<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), context<span class="op">=</span><span class="va">None</span>, name<span class="op">=</span><span class="va">None</span>, job_kwargs<span class="op">=</span><span class="va">None</span>)</span></code></pre></div>
+<p>Creates a new Job that runs on a daily basis and adds it to the queue.</p>
+<p><em>callback</em>: The callback function that should be executed by the new job. Callback signature for context based API: def callback(CallbackContext)</p>
+<p><em>time (datetime.time)</em> – Time of day at which the job should run. If the timezone (time.tzinfo) is None, the default timezone of the bot will be used.</p>
+<p><em>days (Tuple[int], optional)</em> – Defines on which days of the week the job should run (where 0-6 correspond to monday - sunday). Defaults to EVERY_DAY</p>
+<p><em>context (object, optional)</em> – Additional data needed for the callback function. Can be accessed through job.context in the callback. Defaults to None.</p>
+<p><em>name (str, optional)</em> – The name of the new job. Defaults to callback.__name__.</p>
+<p><em>job_kwargs (dict, optional)</em> – Arbitrary keyword arguments to pass to the scheduler.add_job().</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="telegram.html#cb39-1" aria-hidden="true" tabindex="-1"></a>run_monthly(callback, when, day, context<span class="op">=</span><span class="va">None</span>, name<span class="op">=</span><span class="va">None</span>, day_is_strict<span class="op">=</span><span class="va">True</span>, job_kwargs<span class="op">=</span><span class="va">None</span>)</span></code></pre></div>
+<p>Creates a new Job that runs on a monthly basis and adds it to the queue.</p>
+<p><em>callback (callable)</em> – The callback function that should be executed by the new job. Callback signature for context based API: def callback(CallbackContext)</p>
+<p><em>when (datetime.time)</em> – Time of day at which the job should run. If the timezone (when.tzinfo) is None, the default timezone of the bot will be used.</p>
+<p><em>day (int)</em> – Defines the day of the month whereby the job would run. It should be within the range of 1 and 31, inclusive.</p>
+<p><em>context (object, optional)</em> – Additional data needed for the callback function. Can be accessed through job.context in the callback. Defaults to None.</p>
+<p><em>name (str, optional)</em> – The name of the new job. Defaults to callback.__name__.</p>
+<p><em>day_is_strict (bool, optional)</em> – If False and day &gt; month.days, will pick the last day in the month. Defaults to True.</p>
+<p><em>job_kwargs (dict, optional)</em> – Arbitrary keyword arguments to pass to the scheduler.add_job().</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="telegram.html#cb40-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-2"><a href="telegram.html#cb40-2" aria-hidden="true" tabindex="-1"></a>run_once(callback, when, context<span class="op">=</span><span class="va">None</span>, name<span class="op">=</span><span class="va">None</span>, job_kwargs<span class="op">=</span><span class="va">None</span>)</span></code></pre></div>
+<p>Creates a new Job that runs once and adds it to the queue.</p>
+<p><em>callback (callable)</em> – The callback function that should be executed by the new job. Callback signature for context based API: def callback(CallbackContext)</p>
+<p><em>when (int | float | datetime.timedelta | datetime.datetime | datetime.time)</em> – Time in or at which the job should run. This parameter will be interpreted depending on its type.</p>
+<p>int or float will be interpreted as “seconds from now” in which the job should run.</p>
+<p>datetime.timedelta will be interpreted as “time from now” in which the job should run.</p>
+<p>datetime.datetime will be interpreted as a specific date and time at which the job should run. If the timezone (datetime.tzinfo) is None, the default timezone of the bot will be used.</p>
+<p>datetime.time will be interpreted as a specific time of day at which the job should run. This could be either today or, if the time has already passed, tomorrow. If the timezone (time.tzinfo) is None, the default timezone of the bot will be used.</p>
+<p><em>context (object, optional)</em> – Additional data needed for the callback function. Can be accessed through job.context in the callback. Defaults to None.</p>
+<p><em>name (str, optional)</em> – The name of the new job. Defaults to callback.__name__.</p>
+<p><em>job_kwargs (dict, optional)</em> – Arbitrary keyword arguments to pass to the scheduler.add_job().</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="telegram.html#cb41-1" aria-hidden="true" tabindex="-1"></a>run_repeating(callback, interval, first<span class="op">=</span><span class="va">None</span>, last<span class="op">=</span><span class="va">None</span>, context<span class="op">=</span><span class="va">None</span>, name<span class="op">=</span><span class="va">None</span>, job_kwargs<span class="op">=</span><span class="va">None</span>)</span></code></pre></div>
+<p>Creates a new Job that runs at specified intervals and adds it to the queue.</p>
+<p><em>callback (callable)</em> – The callback function that should be executed by the new job. Callback signature for context based API: def callback(CallbackContext)</p>
+<p><em>interval (int | float | datetime.timedelta)</em> – The interval in which the job will run. If it is an int or a float, it will be interpreted as seconds.</p>
+<p><em>first (int | float | datetime.timedelta | datetime.datetime | datetime.time, optional)</em> – Time in or at which the job should run. This parameter will be interpreted depending on its type.
+int or float will be interpreted as “seconds from now” in which the job should run.</p>
+<p>datetime.timedelta will be interpreted as “time from now” in which the job should run.</p>
+<p>datetime.datetime will be interpreted as a specific date and time at which the job should run. If the timezone (datetime.tzinfo) is None, the default timezone of the bot will be used.
+datetime.time will be interpreted as a specific time of day at which the job should run. This could be either today or, if the time has already passed, tomorrow. If the timezone (time.tzinfo) is None, the default timezone of the bot will be used.
+Defaults to interval</p>
+<p><em>last (int | float | datetime.timedelta | datetime.datetime | datetime.time, optional)</em> – Latest possible time for the job to run. This parameter will be interpreted depending on its type. See first for details.
+If last is datetime.datetime or datetime.time type and last.tzinfo is None, the default timezone of the bot will be assumed.
+Defaults to None.</p>
+<p><em>context (object, optional)</em> – Additional data needed for the callback function. Can be accessed through job.context in the callback. Defaults to None.</p>
+<p><em>name (str, optional)</em> – The name of the new job. Defaults to callback.__name__.</p>
+<p><em>job_kwargs (dict, optional)</em> – Arbitrary keyword arguments to pass to the scheduler.add_job().</p>
+</div>
+<div id="daily-example" class="section level3" number="8.6.3">
+<h3><span class="header-section-number">8.6.3</span> daily example</h3>
+<p>We need the callback function:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="telegram.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> trash(job_context):</span>
+<span id="cb42-2"><a href="telegram.html#cb42-2" aria-hidden="true" tabindex="-1"></a>    job_context.bot.send_message(chat_id<span class="op">=</span>main_chat_id,</span>
+<span id="cb42-3"><a href="telegram.html#cb42-3" aria-hidden="true" tabindex="-1"></a>                             text<span class="op">=</span><span class="st">&quot;It&#39;s Wednesday. Don&#39;t forget to put the trash outside!&quot;</span>)</span>
+<span id="cb42-4"><a href="telegram.html#cb42-4" aria-hidden="true" tabindex="-1"></a>   </span></code></pre></div>
+<p>And need to schedule the job, e.g. in our main function:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="telegram.html#cb43-1" aria-hidden="true" tabindex="-1"></a> j.run_daily(trash, days<span class="op">=</span>(<span class="dv">2</span>,),time <span class="op">=</span> datetime.time(hour <span class="op">=</span> <span class="dv">16</span>, minute <span class="op">=</span> <span class="dv">0</span>, second <span class="op">=</span> <span class="dv">0</span>))</span></code></pre></div>
+</div>
+</div>
+<div id="simple-conversation" class="section level2" number="8.7">
+<h2><span class="header-section-number">8.7</span> Simple conversation</h2>
+<p>First, think about how the conversation should go. How is going to start? By a command, or if the user uses a certain keyword?
+What are the different states of the conversation? When is it going to end.
+You can draw a state diagram for that.</p>
+<p>As an example we take a bot who is triggered by the word “boring”. The bot then asks if it should tell some random facts. If not, it asks if it should come up with some tongue twists.
+(All facts and tongue twists were found on Wikipedia are CC-licensed.)</p>
+<p><img src="images/bored.png" alt="Are you bored" />
+A state diagram for that could look like this:</p>
+<div class="figure">
+<embed src="images/drawing.pdf" />
+<p class="caption">Draw a state diagram</p>
+</div>
+<p>We define the states as global parameters:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="telegram.html#cb44-1" aria-hidden="true" tabindex="-1"></a>FUNFACTS, TONGUE_TWIST <span class="op">=</span> <span class="bu">range</span>(<span class="dv">2</span>)</span></code></pre></div>
+<p>In the main function we define a conversation handler and add it to the dispatcher:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="telegram.html#cb45-1" aria-hidden="true" tabindex="-1"></a>conv_handler <span class="op">=</span> ConversationHandler(</span>
+<span id="cb45-2"><a href="telegram.html#cb45-2" aria-hidden="true" tabindex="-1"></a>        entry_points<span class="op">=</span>[MessageHandler(Filters.regex(<span class="st">&#39;.*boring.*&#39;</span>), start_conversation)],</span>
+<span id="cb45-3"><a href="telegram.html#cb45-3" aria-hidden="true" tabindex="-1"></a>        states<span class="op">=</span>{</span>
+<span id="cb45-4"><a href="telegram.html#cb45-4" aria-hidden="true" tabindex="-1"></a>            FUNFACTS: [MessageHandler(Filters.regex(<span class="st">&#39;^(y|yes|Yes|n|no|No)$&#39;</span>), more_funfacts)],</span>
+<span id="cb45-5"><a href="telegram.html#cb45-5" aria-hidden="true" tabindex="-1"></a>            TONGUE_TWIST: [MessageHandler(Filters.regex(<span class="st">&#39;^(y|yes|Yes|n|no|No)$&#39;</span>), tongue_twist)]</span>
+<span id="cb45-6"><a href="telegram.html#cb45-6" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb45-7"><a href="telegram.html#cb45-7" aria-hidden="true" tabindex="-1"></a>        fallbacks<span class="op">=</span>[MessageHandler(<span class="op">~</span>Filters.regex(<span class="st">&#39;^(y|yes|Yes|n|no|No)$&#39;</span>), bye), CommandHandler(<span class="st">&#39;cancel&#39;</span>, bye)],</span>
+<span id="cb45-8"><a href="telegram.html#cb45-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb45-9"><a href="telegram.html#cb45-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-10"><a href="telegram.html#cb45-10" aria-hidden="true" tabindex="-1"></a>    dp.add_handler(conv_handler)</span></code></pre></div>
+<p>The regular expression ‘.<em>boring.</em>’ makes that the conversation starts, whenever a user writes a message with the word ‘boring’. In that case the function start_conversation is called.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="telegram.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> start_conversation(update, context):</span>
+<span id="cb46-2"><a href="telegram.html#cb46-2" aria-hidden="true" tabindex="-1"></a>    reply_keyboard <span class="op">=</span> [[<span class="st">&#39;Yes&#39;</span>, <span class="st">&#39;No&#39;</span>]]</span>
+<span id="cb46-3"><a href="telegram.html#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="telegram.html#cb46-4" aria-hidden="true" tabindex="-1"></a>    update.message.reply_text(</span>
+<span id="cb46-5"><a href="telegram.html#cb46-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;Are you bored? &#39;</span></span>
+<span id="cb46-6"><a href="telegram.html#cb46-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;Do you want me to tell you some random fact?&#39;</span>,</span>
+<span id="cb46-7"><a href="telegram.html#cb46-7" aria-hidden="true" tabindex="-1"></a>        reply_markup<span class="op">=</span>ReplyKeyboardMarkup(</span>
+<span id="cb46-8"><a href="telegram.html#cb46-8" aria-hidden="true" tabindex="-1"></a>            reply_keyboard, one_time_keyboard<span class="op">=</span><span class="va">True</span>, input_field_placeholder<span class="op">=</span><span class="st">&#39;Random facts?&#39;</span></span>
+<span id="cb46-9"><a href="telegram.html#cb46-9" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb46-10"><a href="telegram.html#cb46-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb46-11"><a href="telegram.html#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="telegram.html#cb46-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> FUNFACTS</span></code></pre></div>
+<p>It creates some buttons, a reply keyboard.</p>
+<div class="figure">
+<img src="images/buttons.png" alt="" />
+<p class="caption">Buttons</p>
+</div>
+<p>The answer is given to the function more_funfacts:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="telegram.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> more_funfacts(update, context):</span>
+<span id="cb47-2"><a href="telegram.html#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> update.message.text.lower() <span class="kw">in</span> [<span class="st">&#39;yes&#39;</span>, <span class="st">&#39;y&#39;</span>, <span class="st">&#39;Yes&#39;</span>]:</span>
+<span id="cb47-3"><a href="telegram.html#cb47-3" aria-hidden="true" tabindex="-1"></a>        reply_keyboard <span class="op">=</span> [[<span class="st">&#39;Yes&#39;</span>, <span class="st">&#39;No&#39;</span>]]</span>
+<span id="cb47-4"><a href="telegram.html#cb47-4" aria-hidden="true" tabindex="-1"></a>        fact <span class="op">=</span> funfact_helper()</span>
+<span id="cb47-5"><a href="telegram.html#cb47-5" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(fact)</span>
+<span id="cb47-6"><a href="telegram.html#cb47-6" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(</span>
+<span id="cb47-7"><a href="telegram.html#cb47-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;Do you want more facts?&#39;</span>,</span>
+<span id="cb47-8"><a href="telegram.html#cb47-8" aria-hidden="true" tabindex="-1"></a>            reply_markup<span class="op">=</span>ReplyKeyboardMarkup(</span>
+<span id="cb47-9"><a href="telegram.html#cb47-9" aria-hidden="true" tabindex="-1"></a>                reply_keyboard, one_time_keyboard<span class="op">=</span><span class="va">True</span>, input_field_placeholder<span class="op">=</span><span class="st">&#39;Random facts?&#39;</span></span>
+<span id="cb47-10"><a href="telegram.html#cb47-10" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb47-11"><a href="telegram.html#cb47-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb47-12"><a href="telegram.html#cb47-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> FUNFACTS</span>
+<span id="cb47-13"><a href="telegram.html#cb47-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb47-14"><a href="telegram.html#cb47-14" aria-hidden="true" tabindex="-1"></a>        reply_keyboard <span class="op">=</span> [[<span class="st">&#39;Yes&#39;</span>, <span class="st">&#39;No&#39;</span>]]</span>
+<span id="cb47-15"><a href="telegram.html#cb47-15" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(<span class="st">&quot;Ok, should I give you a random tongue twist instead?&quot;</span>,</span>
+<span id="cb47-16"><a href="telegram.html#cb47-16" aria-hidden="true" tabindex="-1"></a>        reply_markup<span class="op">=</span>ReplyKeyboardMarkup(</span>
+<span id="cb47-17"><a href="telegram.html#cb47-17" aria-hidden="true" tabindex="-1"></a>            reply_keyboard, one_time_keyboard<span class="op">=</span><span class="va">True</span>, input_field_placeholder<span class="op">=</span><span class="st">&#39;Random tongue twist?&#39;</span></span>
+<span id="cb47-18"><a href="telegram.html#cb47-18" aria-hidden="true" tabindex="-1"></a>        ),)</span>
+<span id="cb47-19"><a href="telegram.html#cb47-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> TONGUE_TWIST</span></code></pre></div>
+<p>If the answer was “yes”, we will get a random fact and are asked if we want more.
+If the answer was “no”, we will be asked if we want a tongue twist. In this case, tongue_twist is called:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="telegram.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tongue_twist(update, context):</span>
+<span id="cb48-2"><a href="telegram.html#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> update.message.text.lower() <span class="kw">in</span> [<span class="st">&#39;yes&#39;</span>, <span class="st">&#39;y&#39;</span>, <span class="st">&#39;Yes&#39;</span>]:</span>
+<span id="cb48-3"><a href="telegram.html#cb48-3" aria-hidden="true" tabindex="-1"></a>        reply_keyboard <span class="op">=</span> [[<span class="st">&#39;Yes&#39;</span>, <span class="st">&#39;No&#39;</span>]]</span>
+<span id="cb48-4"><a href="telegram.html#cb48-4" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(tongue_twist_helper())</span>
+<span id="cb48-5"><a href="telegram.html#cb48-5" aria-hidden="true" tabindex="-1"></a>        update.message.reply_text(</span>
+<span id="cb48-6"><a href="telegram.html#cb48-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;Do you want another tongue twist?&#39;</span>,</span>
+<span id="cb48-7"><a href="telegram.html#cb48-7" aria-hidden="true" tabindex="-1"></a>            reply_markup<span class="op">=</span>ReplyKeyboardMarkup(</span>
+<span id="cb48-8"><a href="telegram.html#cb48-8" aria-hidden="true" tabindex="-1"></a>                reply_keyboard, one_time_keyboard<span class="op">=</span><span class="va">True</span>, input_field_placeholder<span class="op">=</span><span class="st">&#39;Random tongue twist?&#39;</span></span>
+<span id="cb48-9"><a href="telegram.html#cb48-9" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb48-10"><a href="telegram.html#cb48-10" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb48-11"><a href="telegram.html#cb48-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> TONGUE_TWIST</span>
+<span id="cb48-12"><a href="telegram.html#cb48-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb48-13"><a href="telegram.html#cb48-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> bye(update, context)</span></code></pre></div>
+<p>Finally, if the user does not want to have a tongue twist anymore, the bot says good bye. This also happens if the user answers none-sense or uses the “/cancel”-command.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="telegram.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bye(update, context):</span>
+<span id="cb49-2"><a href="telegram.html#cb49-2" aria-hidden="true" tabindex="-1"></a>    update.message.reply_text(</span>
+<span id="cb49-3"><a href="telegram.html#cb49-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&#39;Bye! Have a nice day. Hope you are not bored anymore&#39;</span>, reply_markup<span class="op">=</span>ReplyKeyboardRemove()</span>
+<span id="cb49-4"><a href="telegram.html#cb49-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb49-5"><a href="telegram.html#cb49-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ConversationHandler.END</span></code></pre></div>
+</div>
+<div id="inline-bots" class="section level2" number="8.8">
+<h2><span class="header-section-number">8.8</span> Inline Bots</h2>
+<p>Can be used in any chat. To see an example look at <span class="citation">@stickers</span>. E.g. write <span class="citation">@stickers</span> to your saved messages, follow the link and start the bot. From now on, you can use <span class="citation">@stickers</span> in combination with an emoji in any chat. If you want your own bot to work in inline mode send /setinline to the botFather.</p>
+</div>
+<div id="more-resources" class="section level2" number="8.9">
+<h2><span class="header-section-number">8.9</span> More resources</h2>
+<p>Here is the API: <a href="https://python-telegram-bot.readthedocs.io/en/stable/">https://python-telegram-bot.readthedocs.io/en/stable/</a></p>
+<p>And here are some great examples: <a href="https://github.com/python-telegram-bot/python-telegram-bot/tree/master/examples">https://github.com/python-telegram-bot/python-telegram-bot/tree/master/examples</a></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercises-day-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercises-day-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

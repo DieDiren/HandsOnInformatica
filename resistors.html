@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Resistors | Hands on—Programming own Bots and Systems for Smart Homes and Gardens</title>
+  <meta name="description" content="7 Resistors | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Resistors | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Resistors | Hands on—Programming own Bots and Systems for Smart Homes and Gardens" />
+  
+  
+  
+
+<meta name="author" content="Diren Senger" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hardware.html"/>
+<link rel="next" href="exercises-day-1.html"/>
+<script src="book_assets/header-attrs-2.9/header-attrs.js"></script>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="teaser.html"><a href="teaser.html"><i class="fa fa-check"></i><b>1</b> Teaser</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html"><i class="fa fa-check"></i><b>3</b> Working with the Raspberry Pi</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#getting-started"><i class="fa fa-check"></i><b>3.1</b> Getting started</a></li>
+<li class="chapter" data-level="3.2" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#the-operating-system"><i class="fa fa-check"></i><b>3.2</b> The operating system</a></li>
+<li class="chapter" data-level="3.3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#using-the-raspberry-pi-as-a-desktop-computer"><i class="fa fa-check"></i><b>3.3</b> Using the Raspberry Pi as a desktop computer</a></li>
+<li class="chapter" data-level="3.4" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#the-raspberry-pi-and-ssh"><i class="fa fa-check"></i><b>3.4</b> The Raspberry-Pi and SSH</a></li>
+<li class="chapter" data-level="3.5" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#establishing-a-wifi-connection"><i class="fa fa-check"></i><b>3.5</b> Establishing a Wifi connection</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-1-use-keyboard-mouse-and-monitor"><i class="fa fa-check"></i><b>3.5.1</b> Option 1: Use keyboard, mouse and monitor</a></li>
+<li class="chapter" data-level="3.5.2" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-2-ethernet-cable"><i class="fa fa-check"></i><b>3.5.2</b> Option 2: Ethernet Cable</a></li>
+<li class="chapter" data-level="3.5.3" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-3-edit-a-config-file-on-the-sd-card"><i class="fa fa-check"></i><b>3.5.3</b> Option 3: Edit a config file on the SD-card</a></li>
+<li class="chapter" data-level="3.5.4" data-path="working-with-the-raspberry-pi.html"><a href="working-with-the-raspberry-pi.html#option-4-make-a-hotspot-with-your-mobile-phone"><i class="fa fa-check"></i><b>3.5.4</b> Option 4: Make a hotspot with your mobile phone</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html"><i class="fa fa-check"></i><b>4</b> Find the IP-address of your Raspberry Pi</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#if-you-connected-mouse-keyboard-and-monitor"><i class="fa fa-check"></i><b>4.1</b> If you connected mouse, keyboard and monitor</a></li>
+<li class="chapter" data-level="4.2" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#angryip-software"><i class="fa fa-check"></i><b>4.2</b> Angryip software</a></li>
+<li class="chapter" data-level="4.3" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#command-line"><i class="fa fa-check"></i><b>4.3</b> Command line</a></li>
+<li class="chapter" data-level="4.4" data-path="find-the-ip-address-of-your-raspberry-pi.html"><a href="find-the-ip-address-of-your-raspberry-pi.html#using-your-routers-administration-page"><i class="fa fa-check"></i><b>4.4</b> Using your router’s administration page</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html"><i class="fa fa-check"></i><b>5</b> Using SSH and the command line</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#the-basics"><i class="fa fa-check"></i><b>5.1</b> The basics</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#finding-your-ip"><i class="fa fa-check"></i><b>5.1.1</b> Finding your IP</a></li>
+<li class="chapter" data-level="5.1.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#connect"><i class="fa fa-check"></i><b>5.1.2</b> Connect!</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#if-some-thing-is-not-working---installing-and-enabling-ssh"><i class="fa fa-check"></i><b>5.2</b> If some thing is not working - Installing and Enabling SSH</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#installation-on-linux"><i class="fa fa-check"></i><b>5.2.1</b> Installation on Linux</a></li>
+<li class="chapter" data-level="5.2.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#on-windows"><i class="fa fa-check"></i><b>5.2.2</b> On Windows</a></li>
+<li class="chapter" data-level="5.2.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#on-mac"><i class="fa fa-check"></i><b>5.2.3</b> On Mac</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#using-the-command-line"><i class="fa fa-check"></i><b>5.3</b> Using the command line</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#list-files"><i class="fa fa-check"></i><b>5.3.1</b> List files</a></li>
+<li class="chapter" data-level="5.3.2" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#change-the-current-directory"><i class="fa fa-check"></i><b>5.3.2</b> Change the current directory</a></li>
+<li class="chapter" data-level="5.3.3" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#show-file"><i class="fa fa-check"></i><b>5.3.3</b> show file</a></li>
+<li class="chapter" data-level="5.3.4" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#edit-file"><i class="fa fa-check"></i><b>5.3.4</b> edit file</a></li>
+<li class="chapter" data-level="5.3.5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#run-a-python-script"><i class="fa fa-check"></i><b>5.3.5</b> run a python script</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#copying-a-file"><i class="fa fa-check"></i><b>5.4</b> copying a file</a></li>
+<li class="chapter" data-level="5.5" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#copying-single-files-using-ssh"><i class="fa fa-check"></i><b>5.5</b> Copying single files using ssh</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="using-ssh-and-the-command-line.html"><a href="using-ssh-and-the-command-line.html#synchronising-directories-using-scp"><i class="fa fa-check"></i><b>5.5.1</b> Synchronising directories using scp</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hardware.html"><a href="hardware.html"><i class="fa fa-check"></i><b>6</b> Hardware</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hardware.html"><a href="hardware.html#pinout"><i class="fa fa-check"></i><b>6.1</b> Pinout</a></li>
+<li class="chapter" data-level="6.2" data-path="hardware.html"><a href="hardware.html#cables"><i class="fa fa-check"></i><b>6.2</b> Cables</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="resistors.html"><a href="resistors.html"><i class="fa fa-check"></i><b>7</b> Resistors</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="resistors.html"><a href="resistors.html#relay"><i class="fa fa-check"></i><b>7.1</b> Relay</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="exercises-day-1.html"><a href="exercises-day-1.html"><i class="fa fa-check"></i><b>8</b> Exercises Day 1</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="exercises-day-1.html"><a href="exercises-day-1.html#change-password"><i class="fa fa-check"></i><b>8.1</b> Change password</a></li>
+<li class="chapter" data-level="8.2" data-path="exercises-day-1.html"><a href="exercises-day-1.html#reboot"><i class="fa fa-check"></i><b>8.2</b> Reboot</a></li>
+<li class="chapter" data-level="8.3" data-path="exercises-day-1.html"><a href="exercises-day-1.html#list-files-1"><i class="fa fa-check"></i><b>8.3</b> List files</a></li>
+<li class="chapter" data-level="8.4" data-path="exercises-day-1.html"><a href="exercises-day-1.html#make-a-readme-file-take-some-notes"><i class="fa fa-check"></i><b>8.4</b> make a Readme file/ take some notes</a></li>
+<li class="chapter" data-level="8.5" data-path="exercises-day-1.html"><a href="exercises-day-1.html#copy-a-file"><i class="fa fa-check"></i><b>8.5</b> copy a file</a></li>
+<li class="chapter" data-level="8.6" data-path="exercises-day-1.html"><a href="exercises-day-1.html#python---hello-world"><i class="fa fa-check"></i><b>8.6</b> Python - Hello World</a></li>
+<li class="chapter" data-level="8.7" data-path="exercises-day-1.html"><a href="exercises-day-1.html#bme280"><i class="fa fa-check"></i><b>8.7</b> BME280</a></li>
+<li class="chapter" data-level="8.8" data-path="exercises-day-1.html"><a href="exercises-day-1.html#your-own-project"><i class="fa fa-check"></i><b>8.8</b> Your own project</a>
+<ul>
+<li class="chapter" data-level="8.8.1" data-path="exercises-day-1.html"><a href="exercises-day-1.html#ideas"><i class="fa fa-check"></i><b>8.8.1</b> Ideas</a></li>
+<li class="chapter" data-level="8.8.2" data-path="exercises-day-1.html"><a href="exercises-day-1.html#collect-the-material-you-need"><i class="fa fa-check"></i><b>8.8.2</b> Collect the material you need</a></li>
+<li class="chapter" data-level="8.8.3" data-path="exercises-day-1.html"><a href="exercises-day-1.html#make-a-plan"><i class="fa fa-check"></i><b>8.8.3</b> Make a plan</a></li>
+<li class="chapter" data-level="8.8.4" data-path="exercises-day-1.html"><a href="exercises-day-1.html#connect-and-test"><i class="fa fa-check"></i><b>8.8.4</b> Connect and test</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="telegram.html"><a href="telegram.html"><i class="fa fa-check"></i><b>9</b> Telegram</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="telegram.html"><a href="telegram.html#security"><i class="fa fa-check"></i><b>9.1</b> Security</a></li>
+<li class="chapter" data-level="9.2" data-path="telegram.html"><a href="telegram.html#security-tipps"><i class="fa fa-check"></i><b>9.2</b> Security tipps</a></li>
+<li class="chapter" data-level="9.3" data-path="telegram.html"><a href="telegram.html#creating-a-telegram-bot"><i class="fa fa-check"></i><b>9.3</b> Creating a telegram bot</a></li>
+<li class="chapter" data-level="9.4" data-path="telegram.html"><a href="telegram.html#adding-a-command"><i class="fa fa-check"></i><b>9.4</b> Adding a command</a></li>
+<li class="chapter" data-level="9.5" data-path="telegram.html"><a href="telegram.html#reading-and-responding-to-messages"><i class="fa fa-check"></i><b>9.5</b> Reading and responding to messages</a></li>
+<li class="chapter" data-level="9.6" data-path="telegram.html"><a href="telegram.html#using-the-job-queue"><i class="fa fa-check"></i><b>9.6</b> Using the job queue</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="telegram.html"><a href="telegram.html#job-queue-example"><i class="fa fa-check"></i><b>9.6.1</b> job queue example</a></li>
+<li class="chapter" data-level="9.6.2" data-path="telegram.html"><a href="telegram.html#job-queue-functions"><i class="fa fa-check"></i><b>9.6.2</b> job queue functions</a></li>
+<li class="chapter" data-level="9.6.3" data-path="telegram.html"><a href="telegram.html#daily-example"><i class="fa fa-check"></i><b>9.6.3</b> daily example</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="telegram.html"><a href="telegram.html#simple-conversation"><i class="fa fa-check"></i><b>9.7</b> Simple conversation</a></li>
+<li class="chapter" data-level="9.8" data-path="telegram.html"><a href="telegram.html#inline-bots"><i class="fa fa-check"></i><b>9.8</b> Inline Bots</a></li>
+<li class="chapter" data-level="9.9" data-path="telegram.html"><a href="telegram.html#more-resources"><i class="fa fa-check"></i><b>9.9</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="exercises-day-2.html"><a href="exercises-day-2.html"><i class="fa fa-check"></i><b>10</b> Exercises Day 2</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="exercises-day-2.html"><a href="exercises-day-2.html#your-first-bot"><i class="fa fa-check"></i><b>10.1</b> Your first bot</a></li>
+<li class="chapter" data-level="10.2" data-path="exercises-day-2.html"><a href="exercises-day-2.html#sense"><i class="fa fa-check"></i><b>10.2</b> /sense</a></li>
+<li class="chapter" data-level="10.3" data-path="exercises-day-2.html"><a href="exercises-day-2.html#add-your-own-command"><i class="fa fa-check"></i><b>10.3</b> add your own command</a></li>
+<li class="chapter" data-level="10.4" data-path="exercises-day-2.html"><a href="exercises-day-2.html#embed-your-own-hardware"><i class="fa fa-check"></i><b>10.4</b> embed your own hardware</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-day-2.html"><a href="exercises-day-2.html#implement-your-own-timer"><i class="fa fa-check"></i><b>10.5</b> Implement your own timer</a></li>
+<li class="chapter" data-level="10.6" data-path="exercises-day-2.html"><a href="exercises-day-2.html#implement-your-own-conversation"><i class="fa fa-check"></i><b>10.6</b> Implement your own conversation</a></li>
+<li class="chapter" data-level="10.7" data-path="exercises-day-2.html"><a href="exercises-day-2.html#check-out-other-examples"><i class="fa fa-check"></i><b>10.7</b> Check out other examples</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="raspap.html"><a href="raspap.html"><i class="fa fa-check"></i><b>11</b> RaspAP</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="raspap.html"><a href="raspap.html#enable-access-point"><i class="fa fa-check"></i><b>11.1</b> Enable access point</a></li>
+<li class="chapter" data-level="11.2" data-path="raspap.html"><a href="raspap.html#disable-access-point"><i class="fa fa-check"></i><b>11.2</b> Disable access point:</a></li>
+<li class="chapter" data-level="11.3" data-path="raspap.html"><a href="raspap.html#how-to-see-which-services-are-running"><i class="fa fa-check"></i><b>11.3</b> How to see which services are running</a></li>
+<li class="chapter" data-level="11.4" data-path="raspap.html"><a href="raspap.html#login"><i class="fa fa-check"></i><b>11.4</b> Login</a></li>
+<li class="chapter" data-level="11.5" data-path="raspap.html"><a href="raspap.html#access-point-administration-page"><i class="fa fa-check"></i><b>11.5</b> Access Point administration page</a></li>
+<li class="chapter" data-level="11.6" data-path="raspap.html"><a href="raspap.html#using-the-access-point-and-ssh"><i class="fa fa-check"></i><b>11.6</b> Using the access point and ssh</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="grafana.html"><a href="grafana.html"><i class="fa fa-check"></i><b>12</b> Grafana</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="grafana.html"><a href="grafana.html#the-setup"><i class="fa fa-check"></i><b>12.1</b> The setup</a></li>
+<li class="chapter" data-level="12.2" data-path="grafana.html"><a href="grafana.html#use-grafana"><i class="fa fa-check"></i><b>12.2</b> Use grafana</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="exercises-day-3.html"><a href="exercises-day-3.html"><i class="fa fa-check"></i><b>13</b> Exercises Day 3</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="exercises-day-3.html"><a href="exercises-day-3.html#add-more-panel-for-bme280"><i class="fa fa-check"></i><b>13.1</b> Add more panel for BME280</a></li>
+<li class="chapter" data-level="13.2" data-path="exercises-day-3.html"><a href="exercises-day-3.html#add-a-panel-for-your-own-data"><i class="fa fa-check"></i><b>13.2</b> Add a panel for your own data</a></li>
+<li class="chapter" data-level="13.3" data-path="exercises-day-3.html"><a href="exercises-day-3.html#here-are-some-other-ideas"><i class="fa fa-check"></i><b>13.3</b> Here are some other ideas</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="exercises-day-3.html"><a href="exercises-day-3.html#grafana-alerts-for-telegram"><i class="fa fa-check"></i><b>13.3.1</b> Grafana alerts for telegram</a></li>
+<li class="chapter" data-level="13.3.2" data-path="exercises-day-3.html"><a href="exercises-day-3.html#embed-a-grafana-plot-in-telegram"><i class="fa fa-check"></i><b>13.3.2</b> Embed a Grafana plot in telegram</a></li>
+<li class="chapter" data-level="13.3.3" data-path="exercises-day-3.html"><a href="exercises-day-3.html#telegram-and-influx"><i class="fa fa-check"></i><b>13.3.3</b> Telegram and Influx</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="exercises-day-3.html"><a href="exercises-day-3.html#work-on-your-own-project"><i class="fa fa-check"></i><b>13.4</b> Work on your own project :)</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html"><i class="fa fa-check"></i><b>14</b> More Raspberry Pi lifehacks</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#run-a-script-on-startup"><i class="fa fa-check"></i><b>14.1</b> Run a script on startup</a></li>
+<li class="chapter" data-level="14.2" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#install-an-image"><i class="fa fa-check"></i><b>14.2</b> Install an image</a></li>
+<li class="chapter" data-level="14.3" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#make-your-own-image"><i class="fa fa-check"></i><b>14.3</b> Make your own image</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#windows"><i class="fa fa-check"></i><b>14.3.1</b> Windows</a></li>
+<li class="chapter" data-level="14.3.2" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#mac"><i class="fa fa-check"></i><b>14.3.2</b> Mac</a></li>
+<li class="chapter" data-level="14.3.3" data-path="more-raspberry-pi-lifehacks.html"><a href="more-raspberry-pi-lifehacks.html#linux"><i class="fa fa-check"></i><b>14.3.3</b> Linux</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="exercises-day-4.html"><a href="exercises-day-4.html"><i class="fa fa-check"></i><b>15</b> Exercises Day 4</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="exercises-day-4.html"><a href="exercises-day-4.html#have-your-script-run-on-startup"><i class="fa fa-check"></i><b>15.1</b> Have your script run on startup</a></li>
+<li class="chapter" data-level="15.2" data-path="exercises-day-4.html"><a href="exercises-day-4.html#burn-your-image"><i class="fa fa-check"></i><b>15.2</b> Burn your image</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="image-sources.html"><a href="image-sources.html"><i class="fa fa-check"></i><b>16</b> Image Sources</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hands on—Programming own Bots and Systems for Smart Homes and Gardens</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="resistors" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Resistors</h1>
+<div class="figure">
+<img src="images/512px-3_Resistors.jpg" alt="" />
+<p class="caption">Resistors</p>
+</div>
+<p>Resistors are used e.g. to adjust the current flow or to adjust the level for some signal processing. They all come with a colour code you can check to find the size of your resistor. There are also online calculators for that, e.g. this one: <a href="https://resistorcolorcodecalc.com/">https://resistorcolorcodecalc.com/</a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:3_Resistors.jpg" class="uri">https://commons.wikimedia.org/wiki/File:3_Resistors.jpg</a></p>
+<div id="relay" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Relay</h2>
+<p>A relay is a switch that can be operated by an electical signal. It can close an electrical circuit which requires some higher voltage or ampere, for example for an LED, or a pump to water your garden.
+To operate the relay, you need to connect voltage, ground and a GPIO pin. You can use 3.3 V or 5 V. Some relais might require 5 V, but if you use 5V you should additionally add a resistance between the GPIO pin and the relay.</p>
+<div class="figure">
+<img src="images/relay.png" alt="" />
+<p class="caption">Relay</p>
+</div>
+<p><a href="https://freesvg.org/1554744391" class="uri">https://freesvg.org/1554744391</a>, CC
+<a href="https://commons.wikimedia.org/wiki/File:Led_light_bulb_-_led_lamp_1.png" class="uri">https://commons.wikimedia.org/wiki/File:Led_light_bulb_-_led_lamp_1.png</a>, CC
+<a href="https://pixabay.com/vectors/socket-electricity-power-electric-280947/" class="uri">https://pixabay.com/vectors/socket-electricity-power-electric-280947/</a></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hardware.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercises-day-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
